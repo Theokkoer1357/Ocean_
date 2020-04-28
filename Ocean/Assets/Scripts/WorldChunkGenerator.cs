@@ -12,9 +12,9 @@ public class WorldChunkGenerator : MonoBehaviour
     public void Generate(List<float> FList)
     {
         int O = 0;
-        for (int i = 0; i < XChunkLength; i++)
+        for (int i = 0; i < YChunkLength; i++)
         {
-            for (int j = 0; j < YChunkLength; j++)
+            for (int j = 0; j < XChunkLength; j++)
             {
                 float I = FList[O];
                 GameObject G = Instantiate(Chunk, new Vector3(i * Chunk.transform.localScale.x, j * Chunk.transform.localScale.x, 0), Quaternion.identity);

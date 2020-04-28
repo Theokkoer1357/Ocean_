@@ -15,16 +15,29 @@ public class WorldMapGenerator : MonoBehaviour
     }
     void GenerateMap()
     {
-        Texture2D T = new Texture2D(6, Layers.Count);
+        Texture2D T = new Texture2D(5, Layers.Count);
         for (int i = 0; i < Layers.Count; i++)
         {
             for (int j = 0; j < 5; j++)
             {
-                Chunk.OnGetBiome(this, T, i, j);
-                
+                float D = Random.Range(0,100);
+                foreach (var item in Layers[i].BiomeFrequencies)
+                {
+                    if(D <= item)
+                    {
+                        WCGColor.Add(item);
+                        break;
+                    }
+                    else
+                    {
+                        D -= item;
+                    }
+                }
+               
             }
         }
         T_ = T;
+        T.Apply();
         UE?.Invoke();
     }
     public void CallToGenrateChunks(WorldChunkGenerator WCG)

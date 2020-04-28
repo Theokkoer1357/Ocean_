@@ -12,14 +12,14 @@ public class WorldChunkGenerator : MonoBehaviour
     public void Generate(List<float> FList)
     {
         int O = 0;
-        for (int i = 0; i < YChunkLength; i++)
+        for (int i = 0; i < XChunkLength; i++)
         {
-            for (int j = 0; j < XChunkLength; j++)
+            for (int j = 0; j < YChunkLength; j++)
             {
                 float I = FList[O];
                 GameObject G = Instantiate(Chunk, new Vector3(i * Chunk.transform.localScale.x, j * Chunk.transform.localScale.x, 0), Quaternion.identity);
-                G.GetComponent<SpriteRenderer>().color = new Color(FList[O], FList[O], FList[O]);
-                Debug.Log(O);
+                G.GetComponent<SpriteRenderer>().color = new Color( FList[O], FList[O], FList[O]);
+                Debug.Log(FList[O]);
                 O++;
             }
         }

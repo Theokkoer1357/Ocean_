@@ -18,8 +18,8 @@ public class WorldChunkGenerator : MonoBehaviour
             {
                 float I = FList[O];
                 GameObject G = Instantiate(Chunk, new Vector3(i * Chunk.transform.localScale.x, j * Chunk.transform.localScale.x, 0), Quaternion.identity);
-                G.GetComponent<SpriteRenderer>().color = new Color(FList[O], FList[O], FList[O]);
-                Debug.Log(O);
+                G.GetComponent<SpriteRenderer>().color = new Color( FList[O], FList[O], FList[O]);
+                Debug.Log(FList[O]);
                 O++;
             }
         }

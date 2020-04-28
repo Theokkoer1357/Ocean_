@@ -21,22 +21,14 @@ public class WorldMapGenerator : MonoBehaviour
             for (int j = 0; j < 5; j++)
             {
                 float D = Random.Range(0,100);
-                int O = 0;
-                foreach (var item in Layers[i].BiomeFrequencies)
+                List<float> A = new List<float>();
+                for (int l = 0; l < Layers[i].Biomes.Count; l++)
                 {
-                    if(D <= item)
-                    {
-                        float f = Layers[i].Biomes[O].MapToBiomeColor;
-                        T.SetPixel(i, j,new Color(f / 255, f / 255, f / 255));
-                        WCGColor.Add(f);
-                        break;
-                    }
-                    else
-                    {
-                        D -= item;
-                        O++;
-                    }
+                    A.Add(Layers[i].Biomes[l].MapToBiomeColor);
                 }
+                float f = Probablilty.ProbabliltyTable(Layers[i].BiomeFrequencies, A, D);
+                WCGColor.Add(f);
+                T.SetPixel(i, j, new Color(f, f, f));
                
             }
         }

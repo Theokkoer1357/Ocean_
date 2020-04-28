@@ -3,23 +3,24 @@ using UnityEngine;
 
 public static class Probablilty 
 {
-    public static int ProbabliltyTable(List<int> A)
+    public static float ProbabliltyTable(List<int> Frequencies, List<float> ActualResults, float Random)
     {
-        List<int> Likelyness = new List<int>(100);
-        for (int i = 0; i < A.Count; i++)
+        int O = 0;
+        foreach (var item in Frequencies)
         {
-            int B = A[i];
-            for (int j = 0; j < B; j++)
+            if (Random <= item)
             {
-                Likelyness.Add(B);
+                float f = ActualResults[O];
+                return f;
+            }
+            else
+            {
+                Random -= item;
+                O++;
             }
         }
+        return 1;
         
-        int C = Random.Range(0, 100);
-        Debug.Log(Likelyness);
-        int D = Likelyness[C];
-        Debug.Log(D);
-        return D;
     }
 
 }

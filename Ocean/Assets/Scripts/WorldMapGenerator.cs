@@ -15,10 +15,10 @@ public class WorldMapGenerator : MonoBehaviour
     }
     void GenerateMap()
     {
-        Texture2D T = new Texture2D(5, Layers.Count);
+        Texture2D T = new Texture2D(50, Layers.Count);
         for (int i = 0; i < Layers.Count; i++)
         {
-            for (int j = 0; j < 5; j++)
+            for (int j = 0; j < 50; j++)
             {
                 float D = Random.Range(0,100);
                 List<float> A = new List<float>();

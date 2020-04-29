@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Map : MonoBehaviour
+public class Map
 {
     public Texture2D t;
-    public void Start()
-    {
-        MapTopGenerate();
-    }
-    public void MapTopGenerate()
+   
+    public Texture2D MapTopGenerate()
     {
         Texture2D T = new Texture2D(30, 30);
         List<float> BedHights = new List<float>();
@@ -29,8 +26,7 @@ public class Map : MonoBehaviour
         t = T;
         t.Apply();
         t.filterMode = FilterMode.Point;
-        GameObject G = GameObject.CreatePrimitive(PrimitiveType.Plane);
-        G.GetComponent<MeshRenderer>().material.mainTexture = t;
-        G.transform.Rotate(new Vector3(-90, 0, 0));
+        return T;
+      
     }
 }

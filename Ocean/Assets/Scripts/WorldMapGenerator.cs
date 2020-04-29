@@ -15,26 +15,18 @@ public class WorldMapGenerator : MonoBehaviour
     }
     void GenerateMap()
     {
-        Texture2D T = new Texture2D(50, Layers.Count);
-        for (int i = 0; i < Layers.Count; i++)
+        Texture2D T = new Texture2D(30, 30);
+        Map M = new Map();
+        T = M.MapTopGenerate();
+        for (int i = 0; i < 30; i++)
         {
-            for (int j = 0; j < 50; j++)
+            for (int j = 0; j < 30; j++)
             {
-                float D = Random.Range(0,100);
-                List<float> A = new List<float>();
-                for (int l = 0; l < Layers[i].Biomes.Count; l++)
-                {
-                    A.Add(Layers[i].Biomes[l].MapToBiomeColor);
-                }
-                float f = Probablilty.ProbabliltyTable(Layers[i].BiomeFrequencies, A, D);
-                WCGColor.Add(f);
-                T.SetPixel(i, j, new Color(f, f, f));
+                WCGColor.Add(T.GetPixel(i, j).grayscale);
                
             }
         }
-        T.Apply();
-        T_ = T;
-        T_.Apply();
+
         UE?.Invoke();
     }
     public void CallToGenrateChunks(WorldChunkGenerator WCG)

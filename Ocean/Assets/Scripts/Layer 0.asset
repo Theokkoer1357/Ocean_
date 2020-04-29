@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Layer 0
   m_EditorClassIdentifier: 
   LayerInt: 0
-  Biomes: []
-  BiomeFrequencies: 
+  Biomes:
+  - {fileID: 11400000, guid: 6df2afcc43bb3d941ba5180dd89d041c, type: 2}
+  BiomeFrequencies: 64000000

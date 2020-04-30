@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
-public class SurfaceGeneration : MonoBehaviour, IBiomeGeneration
+public class BedGeneration : MonoBehaviour, IBiomeGeneration
 {
     public Texture2D Generate(int width, List<float> BlockLevels)
     {

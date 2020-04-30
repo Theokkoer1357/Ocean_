@@ -5,6 +5,8 @@ using UnityEngine;
 public interface IBiomeGeneration 
 {
     bool PreBiomeLocationCheck();
-    Texture2D Generate(int width, List<float> BlockLevels);
+    Texture2D GenerateMap(int width, int length, BiomeProfile Biome);
+
+    Block[] BlockToGenerate(List<Block> Pallete, List<float> BlockMapData, Texture2D Map);
     
 }

@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pallete: []
   TEMP: {r: 0, g: 0, b: 0, a: 0}
+  BiomeGeneration: {fileID: 8358695875505057739, guid: 6a53022ee9d5f0d40b06a1c79e986e92,
+    type: 3}
   MapToBiomeColor: 1

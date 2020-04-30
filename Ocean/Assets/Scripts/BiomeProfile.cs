@@ -7,7 +7,6 @@ using UnityEditor;
 public class BiomeProfile : ScriptableObject
 {
     public List<Block> Pallete;
-    public Color TEMP;
-    public MonoScript BiomeGeneration;
-    public float MapToBiomeColor;
+    public List<float> BlockHights;
+    public GameObject BiomeGeneration;
 }

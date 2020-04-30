@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e543da347bc562408ef261a5e0c65c5, type: 3}
-  m_Name: Biome a
+  m_Script: {fileID: 11500000, guid: 8d6f4f20e4fb77047927d205e22fc2cd, type: 3}
+  m_Name: Ground
   m_EditorClassIdentifier: 
-  Pallete: []
-  TEMP: {r: 0, g: 0, b: 0, a: 0}
-  BiomeGeneration: {fileID: 583467900302190285, guid: 4d48bc4465f843149b07c20ca3cd202f,
-    type: 3}
-  MapToBiomeColor: 0.19
+  BlockSprite: {fileID: 0}
+  PreCoExistingEffects: {fileID: 0}

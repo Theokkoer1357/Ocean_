@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Block : MonoBehaviour
+[CreateAssetMenu(fileName = "Block")]
+public class Block : ScriptableObject
 {
-    
+    public Sprite BlockSprite;
+    public GameObject PreCoExistingEffects;
 }

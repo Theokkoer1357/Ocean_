@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SurfaceGeneration : MonoBehaviour, ILayerGeneration
+public class SurfaceGeneration : MonoBehaviour
 {
-    public Texture2D Generate(int width, List<float> FARR)
+    // Start is called before the first frame update
+    void Start()
     {
-        Texture2D T = new Texture2D(width, 1);
+        
+    }
 
-        return T;
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

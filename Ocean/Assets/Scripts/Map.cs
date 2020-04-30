@@ -13,14 +13,13 @@ public class Map
         for (int i = 0; i < 30; i++)
         {
             float f = Mathf.Sin(Random.Range(0,1.5f) * Time.deltaTime) * 100;
-            T.SetPixel(i, Mathf.RoundToInt(f), new Color(255, 255, 255));
-            for (int j = 0; j < 29 - Mathf.RoundToInt(f); j++)
+            T.SetPixel(i, Mathf.RoundToInt(f), new Color(0.7f, 0.7f, 0.7f));
+            for (int j = 0; j < 26 - Mathf.RoundToInt(f); j++)
             {
-                T.SetPixel(i, j, new Color(255, 255, 255));
+                T.SetPixel(i, j, new Color(0.5f,0.5f,0.5f));
             }
            
             BedHights.Add(f);
-            Debug.Log(f);
         }
         T.Apply();
         t = T;

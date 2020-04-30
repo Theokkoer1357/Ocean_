@@ -26,7 +26,7 @@ public class WorldMapGenerator : MonoBehaviour
                
             }
         }
-
+       
         UE?.Invoke();
     }
     public void CallToGenrateChunks(WorldChunkGenerator WCG)

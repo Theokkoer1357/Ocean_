@@ -7,5 +7,6 @@ public class BiomeProfile : ScriptableObject
 {
     public List<Block> Pallete;
     public Color TEMP;
+    public MonoBehaviour Biome;
     public float MapToBiomeColor;
 }

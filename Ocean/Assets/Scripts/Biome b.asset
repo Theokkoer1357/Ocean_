@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e543da347bc562408ef261a5e0c65c5, type: 3}
   m_Name: Biome b
   m_EditorClassIdentifier: 
-  Pallete: []
-  TEMP: {r: 0, g: 0, b: 0, a: 0}
+  Pallete:
+  - {fileID: 11400000, guid: 7f4be71d39807364eafffda8f73936c4, type: 2}
+  BlockHights:
+  - 0
   BiomeGeneration: {fileID: 8358695875505057739, guid: 6a53022ee9d5f0d40b06a1c79e986e92,
     type: 3}
-  MapToBiomeColor: 1

@@ -19,7 +19,7 @@ public class SurfaceGeneration : MonoBehaviour ,IBiomeGeneration
 
                     if (item == Map.GetPixel(i, j).grayscale)
                     {
-                        B[i] = Pallete[H];
+                        B[O] = Pallete[H];
                     }
                     else
                     {

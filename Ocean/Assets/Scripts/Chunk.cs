@@ -6,7 +6,8 @@ using System.Linq;
 public class Chunk : MonoBehaviour
 {
     public Texture2D T;
-    public Block[] BARR;
+    public Block[] BARR = new Block[25];
+    public List<Vector2> BlockPos;
     public void GenerateBlocks(ChunkBiomeCheck CBC)
     {
         // Gets Biome
@@ -25,6 +26,21 @@ public class Chunk : MonoBehaviour
             Debug.LogError("Generation Type not of .IBiomeGeneration -- The class does not Impliment the Interface and a problem occurred");
         }
 
+        // Instantiate Blocks
+        for (int i = 0; i < BARR.Length; i++)
+        {
+            
+            if (BARR[i] != null)
+            {
+                GameObject G = Instantiate(BARR[i].PreCoExistingEffects);
+                G.transform.parent = transform;
+                G.transform.localPosition = BlockPos[i];
+                G.AddComponent<SpriteRenderer>();
+                G.GetComponent<SpriteRenderer>().sprite = BARR[i].BlockSprite;
+            }
+        }
+
+        // Hide Chunk
 
     }
 }

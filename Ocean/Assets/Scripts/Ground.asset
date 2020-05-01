@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6f4f20e4fb77047927d205e22fc2cd, type: 3}
   m_Name: Ground
   m_EditorClassIdentifier: 
-  BlockSprite: {fileID: 0}
-  PreCoExistingEffects: {fileID: 0}
+  BlockSprite: {fileID: 21300000, guid: 8271338d857a0c641a60e93c5df86b3f, type: 3}
+  PreCoExistingEffects: {fileID: 1596520119429115606, guid: 9699264c659660f439bba01452232713,
+    type: 3}

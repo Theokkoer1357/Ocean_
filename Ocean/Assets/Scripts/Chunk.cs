@@ -41,7 +41,6 @@ public class Chunk : MonoBehaviour
         }
 
         // Hide Chunk
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
     }
 }

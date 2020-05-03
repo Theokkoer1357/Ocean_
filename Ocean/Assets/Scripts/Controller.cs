@@ -19,15 +19,10 @@ public class Controller : MonoBehaviour
         float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotation_z);
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position = Vector3.MoveTowards(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), Speed * Time.deltaTime);
-            R2.Sleep();
-        }
-        else
-        {
-            R2.Sleep();
-        }
+        transform.position = Vector3.MoveTowards(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), Speed * Time.deltaTime);
+        R2.Sleep();
+        return;
+       
     }
    
 }

@@ -5,33 +5,100 @@ using UnityEngine;
 public class GetNextTo : MonoBehaviour
 {
     public E_GetNextTo Dir;
+    public bool b_MaskObjectUse;
+    public string MaskObject;
 
     public void Start()
     {
-        if(Dir == E_GetNextTo.Up)
+        if (b_MaskObjectUse)
         {
-            RaycastHit2D R = Physics2D.Raycast(new Vector3(transform.position.x, transform.position.y + 1f), transform.up * 1);
-            if (R.transform.GetComponent<SpriteRenderer>() != null)
+            if (Dir == E_GetNextTo.Up)
             {
-                R.transform.gameObject.SetActive(false);
+                RaycastHit2D R = Physics2D.Raycast(new Vector3(transform.position.x, transform.position.y + 1f), transform.up * 1);
+                if (R)
+                {
+                    if (R.transform.GetComponent<SpriteRenderer>() != null)
+                    {
+                        R.transform.gameObject.SetActive(false);
+                    }
+                }
+            }
+            if (Dir == E_GetNextTo.Down)
+            {
+                RaycastHit2D R = Physics2D.Raycast(new Vector3(transform.position.x, transform.position.y - 1f), transform.up * 1);
+                if (R.transform.GetComponent<SpriteRenderer>() != null)
+                {
+                    R.transform.gameObject.SetActive(false);
+                }
+            }
+            if (Dir == E_GetNextTo.Left)
+            {
+                RaycastHit2D R = Physics2D.Raycast(new Vector3(transform.position.x + 1, transform.position.y), transform.up * 1);
+                if (R.transform.GetComponent<SpriteRenderer>() != null)
+                {
+                    R.transform.gameObject.SetActive(false);
+                }
+            }
+            if (Dir == E_GetNextTo.Right)
+            {
+                RaycastHit2D R = Physics2D.Raycast(new Vector3(transform.position.x - 1, transform.position.y), transform.up * 1);
+                if (R.transform.GetComponent<SpriteRenderer>() != null)
+                {
+                    R.transform.gameObject.SetActive(false);
+                }
             }
         }
-        if (Dir == E_GetNextTo.Down)
+        else
         {
+            if (Dir == E_GetNextTo.Up)
+            {
+                RaycastHit2D R = Physics2D.Raycast(new Vector3(transform.position.x, transform.position.y + 1f), transform.up * 1);
+                if (R)
+                {
+                    Debug.Log(R.transform.gameObject);
+                    if (R.transform.name == MaskObject)
+                    {
+                        Debug.Log("eeeeeeee");
 
-        }
-        if (Dir == E_GetNextTo.Left)
-        {
-
-        }
-        if (Dir == E_GetNextTo.Right)
-        {
-
+                        R.transform.gameObject.SetActive(false);
+                    }
+                }
+            }
+            if (Dir == E_GetNextTo.Down)
+            {
+                RaycastHit2D R = Physics2D.Raycast(new Vector3(transform.position.x, transform.position.y - 1f), transform.up * 1);
+                if (R)
+                {
+                    if (R.transform.name == MaskObject)
+                    {
+                        R.transform.gameObject.SetActive(false);
+                    }
+                }
+            }
+            if (Dir == E_GetNextTo.Left)
+            {
+                RaycastHit2D R = Physics2D.Raycast(new Vector3(transform.position.x + 1f, transform.position.y), transform.up * 1);
+                if (R)
+                {
+                    if (R.transform.name == MaskObject)
+                    {
+                        R.transform.gameObject.SetActive(false);
+                    }
+                }
+            }
+            if (Dir == E_GetNextTo.Right)
+            {
+                RaycastHit2D R = Physics2D.Raycast(new Vector3(transform.position.x - 1f, transform.position.y), transform.up * 1);
+                if (R)
+                {
+                    if (R.transform.name == MaskObject)
+                    {
+                        R.transform.gameObject.SetActive(false);
+                    }
+                }
+            }
         }
     }
-    public void Update()
-    {
-        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 1.1f), transform.up * 5);
-    }
+    
 }
 public enum E_GetNextTo { Up, Down, Left, Right}

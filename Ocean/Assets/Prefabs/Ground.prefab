@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7356569083268297858}
   - component: {fileID: 5188669963502069620}
   - component: {fileID: 7690040723451825522}
+  - component: {fileID: 2225676736377146289}
+  - component: {fileID: 1211002330857627702}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -71,5 +73,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dir: 0
-  b_MaskObjectUse: 0
-  MaskObject: Water(Clone)
+  b_MaskObjectUse: 1
+  MaskObject:
+  - Water(Clone)
+  - 
+  UE:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2225676736377146289}
+        m_MethodName: Execute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1211002330857627702}
+        m_MethodName: Execute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2225676736377146289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596520119429115606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cfa130168cb6ed40a42fac76e0f620c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasRayCasted: 0
+  Grass: {fileID: 21300000, guid: 3a5bd3da0901ebf4fb9f0c0cd28ab1df, type: 3}
+--- !u!114 &1211002330857627702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596520119429115606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b27738c488ae7b44925300065421bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sand: {fileID: 21300000, guid: 829bb57fefc2f32429a92cb2f7a12912, type: 3}

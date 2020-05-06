@@ -22,10 +22,22 @@ public class Map
             BedHights.Add(f);
         }
         T.Apply();
+        T = Chasms(T);
+        T.Apply();
         t = T;
         t.Apply();
         t.filterMode = FilterMode.Point;
         return T;
       
+    }
+    Texture2D Chasms(Texture2D T)
+    {
+        int T_ = Random.Range(0, T.width);
+        int T__ = T_ + 1;
+        for (int i = 0; i < 30; i++)
+        {
+            T.SetPixel(T_, i, new Color(0.7f, 0.7f, 0.7f));
+        }
+        return T;
     }
 }

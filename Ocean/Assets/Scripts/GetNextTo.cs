@@ -11,10 +11,7 @@ public class GetNextTo : MonoBehaviour
     public UnityEvent UE;
     public int Seconds;
 
-    public void Start()
-    {
-        RayOut();
-    }
+    
     public void RayOut()
     {
         if (!b_MaskObjectUse)

@@ -18,9 +18,9 @@ public class WorldMapGenerator : MonoBehaviour
         Texture2D T = new Texture2D(30, 30);
         Map M = new Map();
         T = M.MapTopGenerate();
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < World.TheWorld.size; i++)
         {
-            for (int j = 0; j < 30; j++)
+            for (int j = 0; j < World.TheWorld.size; j++)
             {
                 WCGColor.Add(T.GetPixel(i, j).grayscale);
                

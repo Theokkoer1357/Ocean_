@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7807449306341121086}
   - component: {fileID: -6739225309577233986}
+  - component: {fileID: 3085698417689813959}
+  - component: {fileID: -6163935537920654663}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -57,3 +59,45 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &3085698417689813959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2174122368217740555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c9d8b2a4007e64c9e7e5b79212b426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dir: 2
+  b_MaskObjectUse: 0
+  MaskObject: []
+  UE:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -6163935537920654663}
+        m_MethodName: Execute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Seconds: 0
+--- !u!114 &-6163935537920654663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2174122368217740555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64ec5aefb631de4599f1f484663e1ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

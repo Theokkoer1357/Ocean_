@@ -76,7 +76,6 @@ MonoBehaviour:
   b_MaskObjectUse: 1
   MaskObject:
   - Water(Clone)
-  - 
   UE:
     m_PersistentCalls:
       m_Calls:
@@ -102,6 +101,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  Seconds: 0
 --- !u!114 &2225676736377146289
 MonoBehaviour:
   m_ObjectHideFlags: 0

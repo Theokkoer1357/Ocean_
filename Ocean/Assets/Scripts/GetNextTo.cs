@@ -10,10 +10,16 @@ public class GetNextTo : MonoBehaviour
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     public void RayOut()
     {
         if (!b_MaskObjectUse)
+=======
+    public void Start()
+    {
+        if (b_MaskObjectUse)
+>>>>>>> parent of 19df8f0... Chasms
 =======
     public void Start()
     {

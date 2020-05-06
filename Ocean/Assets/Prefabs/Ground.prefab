@@ -73,6 +73,7 @@ MonoBehaviour:
   Dir: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   b_MaskObjectUse: 1
   MaskObject:
   - Water(Clone)
@@ -129,6 +130,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sand: {fileID: 21300000, guid: 829bb57fefc2f32429a92cb2f7a12912, type: 3}
+=======
+  b_MaskObjectUse: 0
+  MaskObject: Water(Clone)
+>>>>>>> parent of 19df8f0... Chasms
 =======
   b_MaskObjectUse: 0
   MaskObject: Water(Clone)

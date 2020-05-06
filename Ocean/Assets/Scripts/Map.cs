@@ -22,14 +22,13 @@ public class Map
             BedHights.Add(f);
         }
         T.Apply();
-        T = Chasms(T);
-        T.Apply();
         t = T;
         t.Apply();
         t.filterMode = FilterMode.Point;
         return T;
       
     }
+<<<<<<< HEAD
     Texture2D Chasms(Texture2D T)
     {
         int T_ = Random.Range(0, T.width);
@@ -40,4 +39,6 @@ public class Map
         }
         return T;
     }
+=======
+>>>>>>> parent of 19df8f0... Chasms
 }

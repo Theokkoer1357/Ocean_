@@ -31,6 +31,7 @@ public class Map
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Texture2D Chasms(Texture2D T)
     {
         int T_ = Random.Range(0, T.width);
@@ -41,6 +42,8 @@ public class Map
         }
         return T;
     }
+=======
+>>>>>>> parent of 19df8f0... Chasms
 =======
 >>>>>>> parent of 19df8f0... Chasms
 =======
